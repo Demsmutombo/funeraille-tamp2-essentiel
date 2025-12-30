@@ -1,7 +1,7 @@
 <template>
   <div class="px-4 md:px-8 py-8">
     <!-- Main Title -->
-    <h1 class="text-3xl md:text-4xl font-serif font-bold theme-text mb-6">Mots Words & Souvenirs Parttés</h1>
+    <h1 class="text-3xl md:text-4xl font-serif font-bold theme-text mb-6">Témoignages</h1>
 
     <!-- Share Your Memory Button -->
     <div class="mb-8">

@@ -13,7 +13,7 @@
       
       <!-- Title and Years -->
       <div>
-        <h1 class="text-2xl md:text-3xl font-bold theme-text mb-2">Photo Memories of {{ data.personalInfo.fullName }}</h1>
+        <h1 class="text-2xl md:text-3xl font-bold theme-text mb-2">Galerie Photo de {{ data.personalInfo.fullName }}</h1>
         <p class="text-lg theme-text-secondary">{{ formatDate(data.personalInfo.birthDate) }} - {{ formatDate(data.personalInfo.deathDate) }}</p>
       </div>
     </div>
@@ -32,59 +32,17 @@
         Toutes les photos
       </button>
       <button
-        @click="selectedCategory = 'Photos personnelles'"
+        v-for="category in availableCategories"
+        :key="category"
+        @click="selectedCategory = category"
         :class="[
           'px-4 py-2 rounded-md border transition-all text-sm',
-          selectedCategory === 'Photos personnelles' 
+          selectedCategory === category 
             ? 'theme-border-full theme-accent theme-button' 
             : 'theme-border theme-text-secondary hover:theme-accent'
         ]"
       >
-        Henock
-      </button>
-      <button
-        @click="selectedCategory = 'Morgue'"
-        :class="[
-          'px-4 py-2 rounded-md border transition-all text-sm',
-          selectedCategory === 'Morgue' 
-            ? 'theme-border-full theme-accent theme-button' 
-            : 'theme-border theme-text-secondary hover:theme-accent'
-        ]"
-      >
-        Morgue
-      </button>
-      <button
-        @click="selectedCategory = 'Cimetière'"
-        :class="[
-          'px-4 py-2 rounded-md border transition-all text-sm',
-          selectedCategory === 'Cimetière' 
-            ? 'theme-border-full theme-accent theme-button' 
-            : 'theme-border theme-text-secondary hover:theme-accent'
-        ]"
-      >
-        Cimetière
-      </button>
-      <button
-        @click="selectedCategory = 'Veillée et cérémonie'"
-        :class="[
-          'px-4 py-2 rounded-md border transition-all text-sm',
-          selectedCategory === 'Veillée et cérémonie' 
-            ? 'theme-border-full theme-accent theme-button' 
-            : 'theme-border theme-text-secondary hover:theme-accent'
-        ]"
-      >
-        Veillée et cérémonie
-      </button>
-      <button
-        @click="selectedCategory = 'Bain de consolation'"
-        :class="[
-          'px-4 py-2 rounded-md border transition-all text-sm',
-          selectedCategory === 'Bain de consolation' 
-            ? 'theme-border-full theme-accent theme-button' 
-            : 'theme-border theme-text-secondary hover:theme-accent'
-        ]"
-      >
-        Bain de consolation
+        {{ getCategoryLabel(category) }}
       </button>
     </div>
 
@@ -181,6 +139,29 @@ const selectedPhotoIndex = ref(null)
 
 // État pour le filtre de catégorie
 const selectedCategory = ref('all')
+
+// Catégories disponibles selon le format standard
+const availableCategories = computed(() => {
+  const categories = new Set()
+  data.photos.gallery.forEach(photo => {
+    if (photo.category && !photo.src.includes('/temoignage/')) {
+      categories.add(photo.category)
+    }
+  })
+  return Array.from(categories).sort()
+})
+
+// Fonction pour obtenir le libellé d'affichage de la catégorie
+function getCategoryLabel(category) {
+  const labels = {
+    "Photos d'enfance et jeunesse": "Enfance et jeunesse",
+    "Photos Henock": "Henock",
+    "Photos professionnelles": "Professionnelles",
+    "Photos des obsèques (morgue)": "Obsèques (Morgue)",
+    "Photos des obsèques (cimetière)": "Obsèques (Cimetière)"
+  }
+  return labels[category] || category
+}
 
 // Liste des photos filtrées selon la catégorie sélectionnée (sans doublons et sans photos de témoignage)
 const photos = computed(() => {

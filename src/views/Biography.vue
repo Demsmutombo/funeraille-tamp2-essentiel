@@ -1,5 +1,7 @@
 <template>
   <div class="px-8 py-8">
+    <h1 class="text-3xl md:text-4xl font-bold theme-text mb-8">Biographie</h1>
+    
     <!-- Main Content -->
     <div class="flex flex-col md:flex-row gap-8 mb-8">
       <!-- Profile Picture -->
@@ -48,7 +50,7 @@
 
     <!-- Inspiring Words Section -->
     <div class="text-center py-8 border-t theme-border mt-8">
-      <h2 class="text-2xl font-semibold theme-accent mb-6">Inspiring Words</h2>
+      <h2 class="text-2xl font-semibold theme-accent mb-6">Paroles Inspirantes</h2>
       <blockquote class="text-3xl italic theme-text mb-3 font-light">
         "{{ data.spiritual.favoriteQuotes[0] || 'The light remains with us.' }}"
       </blockquote>

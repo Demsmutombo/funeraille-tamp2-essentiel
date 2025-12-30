@@ -26,7 +26,7 @@
 
       <!-- Citations et paroles -->
       <div v-if="data.spiritual.favoriteQuotes && data.spiritual.favoriteQuotes.length > 0" class="theme-surface border theme-border rounded-lg p-6">
-        <h2 class="text-2xl font-semibold theme-accent mb-4">Parole de Henock</h2>
+        <h2 class="text-2xl font-semibold theme-accent mb-4">Citations et Paroles</h2>
         <div class="space-y-4">
           <blockquote 
             v-for="(quote, index) in data.spiritual.favoriteQuotes" 

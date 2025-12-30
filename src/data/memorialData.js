@@ -1,5 +1,22 @@
-// Données du mémorial - Formulaire Premium
-// Toutes les informations peuvent être personnalisées selon le questionnaire
+// Données du mémorial - Formulaire Standard
+// 
+// Ce fichier contient toutes les données du site mémorial selon le questionnaire standard.
+// Veuillez remplir chaque section avec les informations fournies dans le questionnaire rempli.
+// 
+// Sections à remplir selon le questionnaire standard :
+// 1. Informations personnelles du défunt
+// 2. Informations familiales
+// 3. Biographie détaillée (3-4 paragraphes, environ 400-500 mots)
+// 4. Informations sur les obsèques (veillée, cérémonie, sépulture)
+// 5. Photos (maximum 50 photos)
+// 6. Vidéos (maximum 4 vidéos)
+// 7. Témoignages
+// 8. Citations et versets (4 maximum)
+// 9. Design (couleurs, style, logo, favicon, phrases d'accueil)
+// 10. Contact (nom, téléphone, email, WhatsApp)
+// 
+// IMPORTANT : Ne modifiez pas la structure des données, remplissez uniquement les valeurs.
+// Les champs entre crochets [ ] indiquent où placer les informations.
 
 export const memorialData = {
   // 1. INFORMATIONS PERSONNELLES DU DÉFUNT
@@ -25,9 +42,9 @@ export const memorialData = {
     previousProfessions: [],
     company: "",
     education: {
-      primary: "École catholique Sainte-Marie Goretti",
-      secondary: "Télé de la Victoire",
-      university: "Université Révérend Kim"
+      primary: "École catholique Sainte-Marie Goretti, Télé de la Victoire, Université Révérend Kim",
+      secondary: "",
+      university: ""
     }
   },
 
@@ -62,38 +79,30 @@ export const memorialData = {
     }
   },
 
-  // 3. BIOGRAPHIE COMPLÈTE
+  // 3. BIOGRAPHIE DÉTAILLÉE (3-4 paragraphes, environ 400-500 mots)
   biography: {
     childhood: {
-      place: "République Démocratique du Congo",
-      events: "Talent prometteur dès son jeune âge, Henock a développé une passion profonde pour le football.",
-      passions: "Football"
+      place: "",
+      events: "",
+      passions: ""
     },
     achievements: [
-      "Meilleur joueur au sein du COÉ",
-      "Sélectionné pour un stage de perfectionnement en France à 14 ans",
-      "Surnommé 'Petit Zidane' par les sélectionneurs",
-      "A surpris Claude Le Roy, entraîneur des Léopards de la RDC"
+      // Réalisations principales
     ],
-    hobbies: ["Football"],
-    sports: ["Football"],
-    travels: [
-      "Stage de perfectionnement en France (à 14 ans)",
-      "Résidence en Afrique du Sud (Pretoria, puis Cape Town)"
-    ],
+    hobbies: [],
+    sports: [],
+    travels: [],
     personality: {
-      adjectives: ["Déterminé", "Talentueux", "Persévérant", "Passionné", "Au grand cœur"],
-      values: ["Passion", "Persévérance", "Famille", "Détermination"]
+      adjectives: [],
+      values: []
     },
-    fullBiography: `Henock Ngandu Kabadi était un passionné de football qui a marqué le football congolais de son talent et de sa détermination.
-    
-    Dès son jeune âge, il a montré un talent exceptionnel pour le football. Il a été désigné meilleur joueur au sein du COÉ et a été sélectionné pour un stage de perfectionnement en France à l'âge de 14 ans. Son jeu a surpris les sélectionneurs, dont Claude Le Roy, entraîneur des Léopards de la RDC, qui l'a surnommé "Petit Zidane".
-    
-    Bien que les circonstances de la vie l'aient éloigné du football professionnel, Henock n'a jamais abandonné sa passion pour ce sport. Il a continué à vivre pour le football, partageant son amour du jeu avec tous ceux qui l'entouraient.
-    
-    Henock était le 5ème d'une famille de 7 enfants et était un père aimant pour sa fille Karine Fumbi. Il était connu pour son grand cœur et sa détermination, laissant une empreinte indélébile dans le cœur de tous ceux qui l'ont connu.
-    
-    Sa passion pour le football et son esprit persévérant continueront d'inspirer tous ceux qui l'ont connu. Il restera à jamais dans nos cœurs comme le "Petit Zidane" qui a marqué le football congolais.`
+    fullBiography: `Henock Ngandu Kabadi était un passionné de football qui a marqué le football congolais de son talent et de sa détermination. Dès son jeune âge, né le 15 mai 1992 en République Démocratique du Congo, il a montré un talent exceptionnel pour le football. Au sein d'une famille de 7 enfants, dont il était le 5ème, Henock a développé une passion profonde pour ce sport qui allait marquer toute sa vie. Il a fréquenté l'École catholique Sainte-Marie Goretti, puis le Télé de la Victoire et l'Université Révérend Kim, tout en poursuivant sa passion pour le ballon rond.
+
+Henock a été désigné meilleur joueur au sein du COÉ et a été sélectionné pour un stage de perfectionnement en France à l'âge de 14 ans. Son jeu a surpris les sélectionneurs, dont Claude Le Roy, entraîneur des Léopards de la RDC, qui l'a surnommé "Petit Zidane" en raison de son style de jeu remarquable. Bien que les circonstances de la vie l'aient finalement éloigné du football professionnel, Henock n'a jamais abandonné sa passion pour ce sport. Il a continué à vivre pour le football, partageant son amour du jeu avec tous ceux qui l'entouraient, notamment lors de sa résidence en Afrique du Sud, à Pretoria puis à Cape Town.
+
+Henock était connu pour son grand cœur, sa détermination et sa persévérance. Il était un père aimant pour sa fille Karine Fumbi et un frère dévoué au sein de sa famille. Sa personnalité chaleureuse et son esprit d'équipe ont marqué tous ceux qui l'ont connu. Il incarnait des valeurs de passion, de famille, de détermination et de travail acharné, laissant une empreinte indélébile dans le cœur de tous ceux qui ont eu la chance de le côtoyer.
+
+Sa passion pour le football et son esprit persévérant continueront d'inspirer tous ceux qui l'ont connu. Henock restera à jamais dans nos cœurs comme le "Petit Zidane" qui a marqué le football congolais par son talent et sa personnalité exceptionnelle. Bien qu'il nous ait quittés le 2 septembre 2024, son souvenir vivra éternellement à travers ceux qu'il a touchés de sa générosité et de son amour pour le sport.`
   },
 
   // 4. INFORMATIONS SUR LES OBSÈQUES
@@ -136,116 +145,82 @@ export const memorialData = {
     }
   },
 
-  // 5. PHOTOS
+  // 5. PHOTOS (maximum 50)
   photos: {
-    total: 73, // Total des photos disponibles
+    total: 50, // Total des photos disponibles (maximum 50)
     categories: [
-      "Photos personnelles",
-      "Veillée et cérémonie",
-      "Morgue",
-      "Cimetière",
-      "Bain de consolation"
+      "Photos d'enfance et jeunesse",
+      "Photos Henock",
+      "Photos professionnelles",
+      "Photos des obsèques (morgue)",
+      "Photos des obsèques (cimetière)"
     ],
-    mainPhoto: "/assets/img/portfolio/henock/henock.jpg", // Photo principale de Henock
+    mainPhoto: "/assets/img/portfolio/henock/henock.jpg",
     gallery: [
-      // Photos personnelles de Henock (dossier henock uniquement)
-      { src: "/assets/img/portfolio/henock/henock.jpg", alt: "Henock Ngandu Kabadi", category: "Photos personnelles" },
-      { src: "/assets/img/portfolio/henock/henock (2).jpg", alt: "Henock", category: "Photos personnelles" },
-      { src: "/assets/img/portfolio/henock/IMG-20240905-WA0023.jpg", alt: "Henock", category: "Photos personnelles" },
-      { src: "/assets/img/portfolio/henock/IMG-20240905-WA0024.jpg", alt: "Henock", category: "Photos personnelles" },
-      { src: "/assets/img/portfolio/henock/IMG-20240905-WA0025.jpg", alt: "Henock", category: "Photos personnelles" },
-      { src: "/assets/img/portfolio/henock/IMG-20240905-WA0026.jpg", alt: "Henock", category: "Photos personnelles" },
-      { src: "/assets/img/portfolio/henock/IMG-20240905-WA0027.jpg", alt: "Henock", category: "Photos personnelles" },
-      { src: "/assets/img/portfolio/henock/IMG-20240905-WA0029.jpg", alt: "Henock", category: "Photos personnelles" },
-      { src: "/assets/img/portfolio/henock/IMG-20240905-WA0030.jpg", alt: "Henock", category: "Photos personnelles" },
-      { src: "/assets/img/portfolio/henock/IMG-20240905-WA0031.jpg", alt: "Henock", category: "Photos personnelles" },
-      { src: "/assets/img/portfolio/henock/IMG-20240905-WA0032.jpg", alt: "Henock", category: "Photos personnelles" },
-      { src: "/assets/img/portfolio/henock/IMG-20240905-WA0033.jpg", alt: "Henock", category: "Photos personnelles" },
-      { src: "/assets/img/portfolio/henock/IMG-20240905-WA0034.jpg", alt: "Henock", category: "Photos personnelles" },
-      { src: "/assets/img/portfolio/henock/IMG-20240905-WA0036.jpg", alt: "Henock", category: "Photos personnelles" },
-      { src: "/assets/img/portfolio/henock/IMG-20240905-WA0037.jpg", alt: "Henock", category: "Photos personnelles" },
-      { src: "/assets/img/portfolio/henock/IMG-20240905-WA0040.jpg", alt: "Henock", category: "Photos personnelles" },
-      { src: "/assets/img/portfolio/henock/IMG-20240905-WA0042.jpg", alt: "Henock", category: "Photos personnelles" },
-      { src: "/assets/img/portfolio/henock/IMG-20240919-WA0038.jpg", alt: "Henock", category: "Photos personnelles" },
+      // Photos personnelles de Henock
+      { src: "/assets/img/portfolio/henock/henock.jpg", alt: "Henock Ngandu Kabadi", category: "Photos Henock" },
+      { src: "/assets/img/portfolio/henock/henock (2).jpg", alt: "Henock", category: "Photos Henock" },
+      { src: "/assets/img/portfolio/henock/IMG-20240905-WA0023.jpg", alt: "Henock", category: "Photos Henock" },
+      { src: "/assets/img/portfolio/henock/IMG-20240905-WA0024.jpg", alt: "Henock", category: "Photos Henock" },
+      { src: "/assets/img/portfolio/henock/IMG-20240905-WA0025.jpg", alt: "Henock", category: "Photos Henock" },
+      { src: "/assets/img/portfolio/henock/IMG-20240905-WA0026.jpg", alt: "Henock", category: "Photos Henock" },
+      { src: "/assets/img/portfolio/henock/IMG-20240905-WA0027.jpg", alt: "Henock", category: "Photos Henock" },
+      { src: "/assets/img/portfolio/henock/IMG-20240905-WA0029.jpg", alt: "Henock", category: "Photos Henock" },
+      { src: "/assets/img/portfolio/henock/IMG-20240905-WA0030.jpg", alt: "Henock", category: "Photos Henock" },
+      { src: "/assets/img/portfolio/henock/IMG-20240905-WA0031.jpg", alt: "Henock", category: "Photos Henock" },
+      { src: "/assets/img/portfolio/henock/IMG-20240905-WA0032.jpg", alt: "Henock", category: "Photos Henock" },
+      { src: "/assets/img/portfolio/henock/IMG-20240905-WA0033.jpg", alt: "Henock", category: "Photos Henock" },
+      { src: "/assets/img/portfolio/henock/IMG-20240905-WA0034.jpg", alt: "Henock", category: "Photos Henock" },
+      { src: "/assets/img/portfolio/henock/IMG-20240905-WA0036.jpg", alt: "Henock", category: "Photos Henock" },
+      { src: "/assets/img/portfolio/henock/IMG-20240905-WA0037.jpg", alt: "Henock", category: "Photos Henock" },
+      { src: "/assets/img/portfolio/henock/IMG-20240905-WA0040.jpg", alt: "Henock", category: "Photos Henock" },
+      { src: "/assets/img/portfolio/henock/IMG-20240905-WA0042.jpg", alt: "Henock", category: "Photos Henock" },
+      { src: "/assets/img/portfolio/henock/IMG-20240919-WA0038.jpg", alt: "Henock", category: "Photos Henock" },
       
-      // Photos de veillée et cérémonie (portfolio général)
-      { src: "/assets/img/portfolio/IMG-20240905-WA0023.jpg", alt: "Veillée", category: "Veillée et cérémonie" },
-      { src: "/assets/img/portfolio/IMG-20240905-WA0024.jpg", alt: "Veillée", category: "Veillée et cérémonie" },
-      { src: "/assets/img/portfolio/IMG-20240905-WA0025.jpg", alt: "Veillée", category: "Veillée et cérémonie" },
-      { src: "/assets/img/portfolio/IMG-20240905-WA0026.jpg", alt: "Veillée", category: "Veillée et cérémonie" },
-      { src: "/assets/img/portfolio/IMG-20240905-WA0027.jpg", alt: "Veillée", category: "Veillée et cérémonie" },
-      { src: "/assets/img/portfolio/IMG-20240905-WA0029.jpg", alt: "Veillée", category: "Veillée et cérémonie" },
-      { src: "/assets/img/portfolio/IMG-20240905-WA0030.jpg", alt: "Veillée", category: "Veillée et cérémonie" },
-      { src: "/assets/img/portfolio/IMG-20240905-WA0031.jpg", alt: "Veillée", category: "Veillée et cérémonie" },
-      { src: "/assets/img/portfolio/IMG-20240905-WA0032.jpg", alt: "Veillée", category: "Veillée et cérémonie" },
-      { src: "/assets/img/portfolio/IMG-20240905-WA0033.jpg", alt: "Veillée", category: "Veillée et cérémonie" },
-      { src: "/assets/img/portfolio/IMG-20240905-WA0034.jpg", alt: "Veillée", category: "Veillée et cérémonie" },
-      { src: "/assets/img/portfolio/IMG-20240905-WA0036.jpg", alt: "Veillée", category: "Veillée et cérémonie" },
-      { src: "/assets/img/portfolio/IMG-20240905-WA0037.jpg", alt: "Veillée", category: "Veillée et cérémonie" },
-      { src: "/assets/img/portfolio/IMG-20240905-WA0040.jpg", alt: "Veillée", category: "Veillée et cérémonie" },
-      { src: "/assets/img/portfolio/IMG-20240905-WA0042.jpg", alt: "Veillée", category: "Veillée et cérémonie" },
-      { src: "/assets/img/portfolio/IMG-20240919-WA0017.jpg", alt: "Cérémonie", category: "Veillée et cérémonie" },
-      { src: "/assets/img/portfolio/IMG-20240919-WA0038.jpg", alt: "Cérémonie", category: "Veillée et cérémonie" },
-      { src: "/assets/img/portfolio/IMG-20240919-WA0108.jpg", alt: "Cérémonie", category: "Veillée et cérémonie" },
-      { src: "/assets/img/portfolio/Capture.PNG", alt: "Cérémonie", category: "Veillée et cérémonie" },
+      // Photos de la morgue (obsèques)
+      { src: "/assets/img/portfolio/morgue/IMG-20240919-WA0055.jpg", alt: "Obsèques - Morgue", category: "Photos des obsèques (morgue)" },
+      { src: "/assets/img/portfolio/morgue/IMG-20240919-WA0056.jpg", alt: "Obsèques - Morgue", category: "Photos des obsèques (morgue)" },
+      { src: "/assets/img/portfolio/morgue/IMG-20240919-WA0057.jpg", alt: "Obsèques - Morgue", category: "Photos des obsèques (morgue)" },
+      { src: "/assets/img/portfolio/morgue/IMG-20240919-WA0064.jpg", alt: "Obsèques - Morgue", category: "Photos des obsèques (morgue)" },
+      { src: "/assets/img/portfolio/morgue/IMG-20240919-WA0086.jpg", alt: "Obsèques - Morgue", category: "Photos des obsèques (morgue)" },
+      { src: "/assets/img/portfolio/morgue/IMG-20240919-WA0090.jpg", alt: "Obsèques - Morgue", category: "Photos des obsèques (morgue)" },
+      { src: "/assets/img/portfolio/morgue/IMG-20240919-WA0092.jpg", alt: "Obsèques - Morgue", category: "Photos des obsèques (morgue)" },
+      { src: "/assets/img/portfolio/morgue/IMG-20240919-WA0093.jpg", alt: "Obsèques - Morgue", category: "Photos des obsèques (morgue)" },
+      { src: "/assets/img/portfolio/morgue/IMG-20240919-WA0094.jpg", alt: "Obsèques - Morgue", category: "Photos des obsèques (morgue)" },
+      { src: "/assets/img/portfolio/morgue/IMG-20240919-WA0096.jpg", alt: "Obsèques - Morgue", category: "Photos des obsèques (morgue)" },
+      { src: "/assets/img/portfolio/morgue/IMG-20240919-WA0097.jpg", alt: "Obsèques - Morgue", category: "Photos des obsèques (morgue)" },
+      { src: "/assets/img/portfolio/morgue/IMG-20240919-WA0102.jpg", alt: "Obsèques - Morgue", category: "Photos des obsèques (morgue)" },
       
-      // Photos de la morgue
-      { src: "/assets/img/portfolio/morgue/IMG-20240919-WA0055.jpg", alt: "Morgue", category: "Morgue" },
-      { src: "/assets/img/portfolio/morgue/IMG-20240919-WA0056.jpg", alt: "Morgue", category: "Morgue" },
-      { src: "/assets/img/portfolio/morgue/IMG-20240919-WA0057.jpg", alt: "Morgue", category: "Morgue" },
-      { src: "/assets/img/portfolio/morgue/IMG-20240919-WA0060.jpg", alt: "Morgue", category: "Morgue" },
-      { src: "/assets/img/portfolio/morgue/IMG-20240919-WA0063.jpg", alt: "Morgue", category: "Morgue" },
-      { src: "/assets/img/portfolio/morgue/IMG-20240919-WA0064.jpg", alt: "Morgue", category: "Morgue" },
-      { src: "/assets/img/portfolio/morgue/IMG-20240919-WA0084.jpg", alt: "Morgue", category: "Morgue" },
-      { src: "/assets/img/portfolio/morgue/IMG-20240919-WA0085.jpg", alt: "Morgue", category: "Morgue" },
-      { src: "/assets/img/portfolio/morgue/IMG-20240919-WA0086.jpg", alt: "Morgue", category: "Morgue" },
-      { src: "/assets/img/portfolio/morgue/IMG-20240919-WA0090.jpg", alt: "Morgue", category: "Morgue" },
-      { src: "/assets/img/portfolio/morgue/IMG-20240919-WA0091.jpg", alt: "Morgue", category: "Morgue" },
-      { src: "/assets/img/portfolio/morgue/IMG-20240919-WA0092.jpg", alt: "Morgue", category: "Morgue" },
-      { src: "/assets/img/portfolio/morgue/IMG-20240919-WA0093.jpg", alt: "Morgue", category: "Morgue" },
-      { src: "/assets/img/portfolio/morgue/IMG-20240919-WA0094.jpg", alt: "Morgue", category: "Morgue" },
-      { src: "/assets/img/portfolio/morgue/IMG-20240919-WA0095.jpg", alt: "Morgue", category: "Morgue" },
-      { src: "/assets/img/portfolio/morgue/IMG-20240919-WA0096.jpg", alt: "Morgue", category: "Morgue" },
-      { src: "/assets/img/portfolio/morgue/IMG-20240919-WA0097.jpg", alt: "Morgue", category: "Morgue" },
-      { src: "/assets/img/portfolio/morgue/IMG-20240919-WA0102.jpg", alt: "Morgue", category: "Morgue" },
-      { src: "/assets/img/portfolio/morgue/IMG-20240919-WA0107.jpg", alt: "Morgue", category: "Morgue" },
+      // Photos du cimetière (obsèques)
+      { src: "/assets/img/portfolio/cimetiere/IMG-20240919-WA0020.jpg", alt: "Obsèques - Cimetière", category: "Photos des obsèques (cimetière)" },
+      { src: "/assets/img/portfolio/cimetiere/IMG-20240919-WA0021.jpg", alt: "Obsèques - Cimetière", category: "Photos des obsèques (cimetière)" },
+      { src: "/assets/img/portfolio/cimetiere/IMG-20240919-WA0022.jpg", alt: "Obsèques - Cimetière", category: "Photos des obsèques (cimetière)" },
+      { src: "/assets/img/portfolio/cimetiere/IMG-20240919-WA0023.jpg", alt: "Obsèques - Cimetière", category: "Photos des obsèques (cimetière)" },
+      { src: "/assets/img/portfolio/cimetiere/IMG-20240919-WA0024.jpg", alt: "Obsèques - Cimetière", category: "Photos des obsèques (cimetière)" },
+      { src: "/assets/img/portfolio/cimetiere/IMG-20240919-WA0034.jpg", alt: "Obsèques - Cimetière", category: "Photos des obsèques (cimetière)" },
+      { src: "/assets/img/portfolio/cimetiere/IMG-20240919-WA0035.jpg", alt: "Obsèques - Cimetière", category: "Photos des obsèques (cimetière)" },
+      { src: "/assets/img/portfolio/cimetiere/IMG-20240919-WA0036.jpg", alt: "Obsèques - Cimetière", category: "Photos des obsèques (cimetière)" },
+      { src: "/assets/img/portfolio/cimetiere/IMG-20240919-WA0037.jpg", alt: "Obsèques - Cimetière", category: "Photos des obsèques (cimetière)" },
+      { src: "/assets/img/portfolio/cimetiere/IMG-20240919-WA0045.jpg", alt: "Obsèques - Cimetière", category: "Photos des obsèques (cimetière)" },
+      { src: "/assets/img/portfolio/cimetiere/IMG-20240919-WA0046.jpg", alt: "Obsèques - Cimetière", category: "Photos des obsèques (cimetière)" },
+      { src: "/assets/img/portfolio/cimetiere/IMG-20240919-WA0047.jpg", alt: "Obsèques - Cimetière", category: "Photos des obsèques (cimetière)" },
+      { src: "/assets/img/portfolio/cimetiere/IMG-20240919-WA0048.jpg", alt: "Obsèques - Cimetière", category: "Photos des obsèques (cimetière)" },
+      { src: "/assets/img/portfolio/cimetiere/IMG-20240919-WA0049.jpg", alt: "Obsèques - Cimetière", category: "Photos des obsèques (cimetière)" },
+      { src: "/assets/img/portfolio/cimetiere/IMG-20240919-WA0122.jpg", alt: "Obsèques - Cimetière", category: "Photos des obsèques (cimetière)" },
+      { src: "/assets/img/portfolio/cimetiere/IMG-20240919-WA0126.jpg", alt: "Obsèques - Cimetière", category: "Photos des obsèques (cimetière)" },
+      { src: "/assets/img/portfolio/cimetiere/IMG-20240919-WA0127.jpg", alt: "Obsèques - Cimetière", category: "Photos des obsèques (cimetière)" },
+      { src: "/assets/img/portfolio/cimetiere/IMG-20240919-WA0128.jpg", alt: "Obsèques - Cimetière", category: "Photos des obsèques (cimetière)" },
+      { src: "/assets/img/portfolio/cimetiere/IMG-20240919-WA0130.jpg", alt: "Obsèques - Cimetière", category: "Photos des obsèques (cimetière)" },
+      { src: "/assets/img/portfolio/cimetiere/IMG-20240919-WA0131.jpg", alt: "Obsèques - Cimetière", category: "Photos des obsèques (cimetière)" },
+      { src: "/assets/img/portfolio/cimetiere/IMG-20240919-WA0132.jpg", alt: "Obsèques - Cimetière", category: "Photos des obsèques (cimetière)" },
       
-      // Photos du cimetière
-      { src: "/assets/img/portfolio/cimetiere/IMG-20240919-WA0019.jpg", alt: "Cimetière", category: "Cimetière" },
-      { src: "/assets/img/portfolio/cimetiere/IMG-20240919-WA0020.jpg", alt: "Cimetière", category: "Cimetière" },
-      { src: "/assets/img/portfolio/cimetiere/IMG-20240919-WA0021.jpg", alt: "Cimetière", category: "Cimetière" },
-      { src: "/assets/img/portfolio/cimetiere/IMG-20240919-WA0022.jpg", alt: "Cimetière", category: "Cimetière" },
-      { src: "/assets/img/portfolio/cimetiere/IMG-20240919-WA0023.jpg", alt: "Cimetière", category: "Cimetière" },
-      { src: "/assets/img/portfolio/cimetiere/IMG-20240919-WA0024.jpg", alt: "Cimetière", category: "Cimetière" },
-      { src: "/assets/img/portfolio/cimetiere/IMG-20240919-WA0034.jpg", alt: "Cimetière", category: "Cimetière" },
-      { src: "/assets/img/portfolio/cimetiere/IMG-20240919-WA0035.jpg", alt: "Cimetière", category: "Cimetière" },
-      { src: "/assets/img/portfolio/cimetiere/IMG-20240919-WA0036.jpg", alt: "Cimetière", category: "Cimetière" },
-      { src: "/assets/img/portfolio/cimetiere/IMG-20240919-WA0037.jpg", alt: "Cimetière", category: "Cimetière" },
-      { src: "/assets/img/portfolio/cimetiere/IMG-20240919-WA0045.jpg", alt: "Cimetière", category: "Cimetière" },
-      { src: "/assets/img/portfolio/cimetiere/IMG-20240919-WA0046.jpg", alt: "Cimetière", category: "Cimetière" },
-      { src: "/assets/img/portfolio/cimetiere/IMG-20240919-WA0047.jpg", alt: "Cimetière", category: "Cimetière" },
-      { src: "/assets/img/portfolio/cimetiere/IMG-20240919-WA0048.jpg", alt: "Cimetière", category: "Cimetière" },
-      { src: "/assets/img/portfolio/cimetiere/IMG-20240919-WA0049.jpg", alt: "Cimetière", category: "Cimetière" },
-      { src: "/assets/img/portfolio/cimetiere/IMG-20240919-WA0120.jpg", alt: "Cimetière", category: "Cimetière" },
-      { src: "/assets/img/portfolio/cimetiere/IMG-20240919-WA0122.jpg", alt: "Cimetière", category: "Cimetière" },
-      { src: "/assets/img/portfolio/cimetiere/IMG-20240919-WA0125.jpg", alt: "Cimetière", category: "Cimetière" },
-      { src: "/assets/img/portfolio/cimetiere/IMG-20240919-WA0126.jpg", alt: "Cimetière", category: "Cimetière" },
-      { src: "/assets/img/portfolio/cimetiere/IMG-20240919-WA0127.jpg", alt: "Cimetière", category: "Cimetière" },
-      { src: "/assets/img/portfolio/cimetiere/IMG-20240919-WA0128.jpg", alt: "Cimetière", category: "Cimetière" },
-      { src: "/assets/img/portfolio/cimetiere/IMG-20240919-WA0129.jpg", alt: "Cimetière", category: "Cimetière" },
-      { src: "/assets/img/portfolio/cimetiere/IMG-20240919-WA0130.jpg", alt: "Cimetière", category: "Cimetière" },
-      { src: "/assets/img/portfolio/cimetiere/IMG-20240919-WA0131.jpg", alt: "Cimetière", category: "Cimetière" },
-      { src: "/assets/img/portfolio/cimetiere/IMG-20240919-WA0132.jpg", alt: "Cimetière", category: "Cimetière" },
-      { src: "/assets/img/portfolio/cimetiere/IMG-20240919-WA0133.jpg", alt: "Cimetière", category: "Cimetière" },
-      { src: "/assets/img/portfolio/cimetiere/IMG-20240919-WA0134.jpg", alt: "Cimetière", category: "Cimetière" },
-      { src: "/assets/img/portfolio/cimetiere/IMG-20240919-WA0139.jpg", alt: "Cimetière", category: "Cimetière" },
-      
-      // Photos du bain de consolation
-      { src: "/assets/img/portfolio/bain.PNG", alt: "Bain de consolation", category: "Bain de consolation" }
+      // Autres photos
+      { src: "/assets/img/portfolio/IMG_20240915_050449_957.jpg", alt: "Henock", category: "Photos Henock" },
+      { src: "/assets/img/portfolio/bain.PNG", alt: "Bain de consolation", category: "Photos des obsèques (morgue)" }
     ]
   },
 
-  // 6. VIDÉOS
+  // 6. VIDÉOS (maximum 4)
   videos: {
     available: [
       {
@@ -259,17 +234,12 @@ export const memorialData = {
         type: "morgue"
       },
       {
-        title: "Cimetière de Nécropole",
+        title: "Vidéo des funérailles - Cimetière",
         url: "https://youtu.be/239sjdqiMNc",
         type: "cemetery"
       },
       {
-        title: "Bain de Consolation",
-        url: "https://youtu.be/nDJObACGeBo",
-        type: "consolation"
-      },
-      {
-        title: "Vidéo de Henock",
+        title: "Vidéo hommage - Henock",
         url: "https://youtu.be/ChOY6AXYWdQ",
         type: "tribute"
       }
@@ -278,12 +248,11 @@ export const memorialData = {
       "https://youtu.be/alXebRn-WJY",
       "https://youtu.be/22zi-VKROwc",
       "https://youtu.be/239sjdqiMNc",
-      "https://youtu.be/nDJObACGeBo",
       "https://youtu.be/ChOY6AXYWdQ"
     ]
   },
 
-  // 7. TÉMOIGNAGES ET HOMMAGES
+  // 7. TÉMOIGNAGES
   testimonials: [
     {
       text: "Henock Ngandu Kabadi était bien plus qu'un passionné de football ; il incarnait la détermination, le talent et la persévérance. Dès son plus jeune âge, Henock a su captiver son entourage par son habileté avec le ballon et son esprit d'équipe. Son talent l'a rapidement hissé au sommet du football congolais, attirant l'attention de grands noms comme Claude Le Roy. Sélectionné pour un stage de perfectionnement en France à seulement 14 ans, il a fait preuve d'un potentiel exceptionnel.\n\nBien que les chemins de la vie l'aient finalement éloigné du terrain de football professionnel, Henock n'a jamais abandonné sa passion pour le sport qui avait tant marqué son enfance. Sa vie, partagée entre ses responsabilités familiales et ses rêves sportifs, a été une source d'inspiration pour ceux qui l'entouraient. En tant que père aimant de sa fille Karine et frère dévoué au sein de sa famille, Henock a toujours montré l'importance de la famille, du travail acharné et de l'amour pour ce que l'on fait.\n\nSon départ laisse un grand vide, mais son souvenir, marqué par ses accomplissements et sa personnalité chaleureuse, restera à jamais gravé dans nos cœurs. Henock, tu étais un véritable modèle, et ta mémoire continuera de briller à travers ceux que tu as touchés.",
@@ -298,37 +267,10 @@ export const memorialData = {
       image: "/assets/img/portfolio/temoignage/israel.jpg"
     }
   ],
-  poems: [
-    {
-      title: "À Toi, Mon Frère",
-      author: "Israel Mutombo",
-      text: "Poème rendant hommage à Henock, célébrant sa vie, son talent et son esprit indomptable."
-    }
-  ],
-  specialTributes: [
-    {
-      title: "Frère bien-aimé",
-      description: "Henock était un frère aimant et dévoué"
-    },
-    {
-      title: "Passionné de football",
-      description: "Sa passion pour le football était au cœur de sa vie"
-    },
-    {
-      title: "Petit Zidane",
-      description: "Surnom donné par Claude Le Roy, entraîneur des Léopards de la RDC"
-    },
-    {
-      title: "Homme au grand cœur",
-      description: "Connu pour sa générosité et sa bonté"
-    },
-    {
-      title: "Toujours dans nos cœurs",
-      description: "Sa mémoire vivra éternellement dans nos cœurs"
-    }
-  ],
+  poems: [],
+  specialTributes: [],
 
-  // 8. ÉLÉMENTS SPIRITUELS ET CULTURELS
+  // 8. CITATIONS ET VERSETS (4 maximum)
   spiritual: {
     religion: "Chrétien",
     favoriteVerses: [
@@ -344,7 +286,7 @@ export const memorialData = {
     religiousHymns: []
   },
 
-  // 9. DESIGN ET PERSONNALISATION
+  // 9. DESIGN
   design: {
     favoriteColors: ["Or", "Blanc", "Noir"],
     colorsToAvoid: [],
@@ -354,15 +296,15 @@ export const memorialData = {
     backgroundImages: [],
     welcomePhrases: [
       "En mémoire de",
-      "Unis dans le souvenir",
-      "Pour toujours dans nos cœurs",
-      "Une vie bien vécue",
-      "L'amour ne meurt jamais"
+      "Frère bien-aimé",
+      "Passionné de football",
+      "Petit Zidane",
+      "Pour toujours dans nos cœurs"
     ],
     animationStyle: "Douces et subtiles"
   },
 
-  // 10. CONTACT ET INFORMATIONS
+  // 10. CONTACT
   contact: {
     siteContact: {
       name: "Israel Mutombo",
@@ -380,7 +322,7 @@ export const memorialData = {
     }
   },
 
-  // 11. FONCTIONNALITÉS SUPPLÉMENTAIRES
+  // 11. FONCTIONNALITÉS SUPPLÉMENTAIRES (pour référence)
   features: {
     advancedContactForm: true,
     socialMediaIntegration: true,
@@ -388,15 +330,15 @@ export const memorialData = {
     otherFeatures: []
   },
 
-  // 12. INSPIRATIONS
+  // 12. INSPIRATIONS (pour référence)
   inspirations: {
     referenceSites: [],
     specificElements: []
   },
 
-  // 13. DATES ET DÉLAIS
+  // 13. DATES ET DÉLAIS (pour référence)
   timeline: {
-    launchDate: "2024-05-20",
+    launchDate: "",
     upcomingEvents: []
   }
 }

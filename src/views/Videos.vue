@@ -2,7 +2,7 @@
   <div class="px-4 md:px-8 py-8">
     <!-- Section unique : Vidéos Disponibles -->
     <div class="theme-surface border theme-border rounded-lg p-6">
-      <h1 class="text-3xl md:text-4xl font-bold theme-text mb-8">Vidéos Disponibles</h1>
+      <h1 class="text-3xl md:text-4xl font-bold theme-text mb-8">Vidéos</h1>
 
       <div v-if="allVideos.length === 0" class="text-center py-12">
         <p class="theme-text-secondary text-lg">Aucune vidéo disponible pour le moment.</p>
