@@ -17,10 +17,10 @@
       <p class="text-base theme-text-secondary italic">{{ getDaysSinceDeath(data.personalInfo.deathDate) }} Jours depuis son départ</p>
     </div>
 
-    <!-- Quote Section -->
-    <div class="text-center mb-12 py-8 border-y theme-border">
+    <!-- Quote Section (masqué si pas de citations dans l'offre Essentiel) -->
+    <div v-if="data.spiritual.favoriteQuotes && data.spiritual.favoriteQuotes.length > 0" class="text-center mb-12 py-8 border-y theme-border">
       <blockquote class="text-2xl md:text-3xl italic theme-text font-light mb-3">
-        "{{ data.spiritual.favoriteQuotes[0] || 'The light remains with us.' }}"
+        "{{ data.spiritual.favoriteQuotes[0] }}"
       </blockquote>
       <p class="theme-text-secondary">- {{ data.personalInfo.fullName }}</p>
     </div>
@@ -203,65 +203,6 @@
       </div>
     </div>
 
-    <!-- Testimonials Preview -->
-    <div v-if="data.testimonials.length > 0" class="mb-12">
-      <h2 class="text-3xl font-semibold theme-accent mb-6 text-center">Témoignages</h2>
-      <div class="grid md:grid-cols-3 gap-6 mb-6">
-        <div 
-          v-for="(testimonial, index) in previewTestimonials" 
-          :key="index"
-          class="theme-surface border theme-border rounded-lg p-5"
-        >
-          <div class="flex items-start gap-3 mb-3">
-            <img 
-              :src="testimonial.image" 
-              :alt="testimonial.author || 'Author'" 
-              class="w-10 h-10 rounded-full object-cover flex-shrink-0 border theme-border grayscale hover:grayscale-0 transition-all"
-            />
-            <p class="theme-text-secondary text-sm leading-relaxed flex-1">
-              {{ getDisplayText(testimonial.text) }}
-            </p>
-          </div>
-          <p v-if="testimonial.author" class="theme-text-secondary text-sm">- {{ testimonial.author }}</p>
-        </div>
-      </div>
-      <div class="text-center">
-        <router-link 
-          to="/temoignages"
-          class="inline-block px-6 py-2 border theme-border-full theme-accent theme-button transition-colors rounded-md"
-        >
-          Voir tous les témoignages ({{ data.testimonials.length }})
-        </router-link>
-      </div>
-    </div>
-
-    <!-- Spiritual Section Preview -->
-    <div v-if="data.spiritual.favoriteQuotes && data.spiritual.favoriteQuotes.length > 0" class="theme-surface border theme-border rounded-lg p-6 md:p-8 mb-12">
-      <h2 class="text-3xl font-semibold theme-accent mb-6 text-center">Éléments Spirituels</h2>
-      <div class="max-w-3xl mx-auto space-y-6">
-        <div v-if="data.spiritual.religion" class="text-center">
-          <p class="theme-accent font-medium mb-2">Religion</p>
-          <p class="theme-text-secondary text-lg">{{ data.spiritual.religion }}</p>
-        </div>
-        <div v-if="data.spiritual.favoriteQuotes.length > 0" class="space-y-4">
-          <blockquote 
-            v-for="(quote, index) in data.spiritual.favoriteQuotes.slice(0, 2)" 
-            :key="index"
-            class="text-xl italic theme-text border-l-4 theme-border-full pl-4 py-2"
-          >
-            "{{ quote }}"
-          </blockquote>
-        </div>
-        <div class="text-center mt-6">
-          <router-link 
-            to="/elements-spirituels"
-            class="inline-block px-6 py-2 border theme-border-full theme-accent theme-button transition-colors rounded-md"
-          >
-            Voir tous les éléments spirituels
-          </router-link>
-        </div>
-      </div>
-    </div>
 
     <!-- Quick Links -->
     <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -284,22 +225,13 @@
         <p class="theme-text-secondary text-sm">Informations Familiales</p>
       </router-link>
       <router-link 
-        to="/videos"
+        to="/informations-obeques"
         class="theme-surface border theme-border rounded-lg p-4 text-center hover:theme-border-full transition-all group"
       >
         <svg class="w-8 h-8 theme-accent mx-auto mb-2 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
         </svg>
-        <p class="theme-text-secondary text-sm">Vidéos</p>
-      </router-link>
-      <router-link 
-        to="/carte-commemorative"
-        class="theme-surface border theme-border rounded-lg p-4 text-center hover:theme-border-full transition-all group"
-      >
-        <svg class="w-8 h-8 theme-accent mx-auto mb-2 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-        </svg>
-        <p class="theme-text-secondary text-sm">Carte Commémorative</p>
+        <p class="theme-text-secondary text-sm">Informations Obsèques</p>
       </router-link>
     </div>
   </div>
@@ -321,11 +253,6 @@ const biographyParagraphs = computed(() => {
 // Photos de prévisualisation (4 premières)
 const previewPhotos = computed(() => {
   return data.photos.gallery.slice(0, 4)
-})
-
-// Témoignages de prévisualisation (3 premiers)
-const previewTestimonials = computed(() => {
-  return data.testimonials.slice(0, 3)
 })
 
 // Fonction pour formater la date de cérémonie

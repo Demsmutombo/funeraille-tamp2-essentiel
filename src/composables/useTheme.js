@@ -82,12 +82,12 @@ export const themes = {
   }
 }
 
-// État du thème actuel (partagé globalement)
-const currentTheme = ref('dark')
+// Thème par défaut fixe - Noir Classique
+const DEFAULT_THEME = 'dark'
 
-// Fonction pour appliquer un thème
-export function applyTheme(themeName) {
-  const theme = themes[themeName]
+// Fonction pour appliquer le thème par défaut
+export function applyTheme(themeName = DEFAULT_THEME) {
+  const theme = themes[themeName] || themes[DEFAULT_THEME]
   if (!theme) return
 
   const root = document.documentElement
@@ -104,7 +104,7 @@ export function applyTheme(themeName) {
   }
 
   const borderRgb = hexToRgb(colors.border)
-  const borderRgbString = borderRgb ? `${borderRgb.r}, ${borderRgb.g}, ${borderRgb.b}` : '252, 211, 77'
+  const borderRgbString = borderRgb ? `${borderRgb.r}, ${borderRgb.g}, ${borderRgb.b}` : '212, 175, 55'
 
   // Appliquer les couleurs CSS variables
   root.style.setProperty('--theme-bg', colors.background)
@@ -116,40 +116,25 @@ export function applyTheme(themeName) {
   root.style.setProperty('--theme-border', colors.border)
   root.style.setProperty('--theme-border-rgb', borderRgbString)
   root.style.setProperty('--theme-border-opacity', colors.borderOpacity)
-
-  // Sauvegarder dans localStorage
-  localStorage.setItem('memorial-theme', themeName)
-  currentTheme.value = themeName
 }
 
-// Fonction pour charger le thème sauvegardé
+// Fonction pour charger le thème par défaut
 export function loadTheme() {
-  const savedTheme = localStorage.getItem('memorial-theme')
-  if (savedTheme && themes[savedTheme]) {
-    applyTheme(savedTheme)
-  } else {
-    applyTheme('dark')
-  }
+  // Toujours appliquer le thème par défaut
+  applyTheme(DEFAULT_THEME)
 }
 
-// Composable Vue
+// Composable Vue (conservé pour compatibilité mais ne permet plus de changement)
 export function useTheme() {
-  // Charger le thème au montage si pas déjà chargé
+  // Charger le thème par défaut au montage
   if (typeof window !== 'undefined') {
-    const savedTheme = localStorage.getItem('memorial-theme')
-    if (savedTheme && themes[savedTheme]) {
-      if (currentTheme.value === 'dark') {
-        applyTheme(savedTheme)
-      }
-    } else if (currentTheme.value === 'dark') {
-      applyTheme('dark')
-    }
+    applyTheme(DEFAULT_THEME)
   }
 
   return {
-    currentTheme,
+    currentTheme: { value: DEFAULT_THEME },
     themes,
-    applyTheme,
+    applyTheme: () => applyTheme(DEFAULT_THEME), // Force toujours le thème par défaut
     loadTheme
   }
 }

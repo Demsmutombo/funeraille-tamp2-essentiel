@@ -22,9 +22,6 @@
       <div class="absolute top-0 left-0 w-16 h-16 border-t-2 border-l-2 theme-border" style="opacity: 0.4;"></div>
       <div class="absolute bottom-0 right-0 w-16 h-16 border-b-2 border-r-2 theme-border" style="opacity: 0.4;"></div>
       
-      <!-- Theme Selector -->
-      <ThemeSelector />
-
       <!-- Navigation Bar -->
       <nav class="border-b theme-border px-4 md:px-8 py-4 relative">
         <div class="flex items-center justify-between">
@@ -89,38 +86,20 @@
             </li>
             <li>
               <router-link 
-                to="/videos" 
-                class="hover:theme-accent transition-colors"
-                :class="{ 'border-b-2 theme-border pb-1 font-medium theme-accent': $route.name === 'Videos' }"
-              >
-                Vidéos
-              </router-link>
-            </li>
-            <li>
-              <router-link 
-                to="/temoignages" 
-                class="hover:theme-accent transition-colors"
-                :class="{ 'border-b-2 theme-border pb-1 font-medium theme-accent': $route.name === 'Testimonials' }"
-              >
-                Témoignages
-              </router-link>
-            </li>
-            <li>
-              <router-link 
-                to="/elements-spirituels" 
-                class="hover:theme-accent transition-colors"
-                :class="{ 'border-b-2 theme-border pb-1 font-medium theme-accent': $route.name === 'Spiritual' }"
-              >
-                Spirituel
-              </router-link>
-            </li>
-            <li>
-              <router-link 
                 to="/informations-obeques" 
                 class="hover:theme-accent transition-colors"
                 :class="{ 'border-b-2 theme-border pb-1 font-medium theme-accent': $route.name === 'ServiceDetails' }"
               >
                 Obsèques
+              </router-link>
+            </li>
+            <li>
+              <router-link 
+                to="/carte-commemorative" 
+                class="hover:theme-accent transition-colors"
+                :class="{ 'border-b-2 theme-border pb-1 font-medium theme-accent': $route.name === 'MemorialCard' }"
+              >
+                Carte
               </router-link>
             </li>
           </ul>
@@ -194,36 +173,6 @@
                 :class="{ 'border-l-4 theme-border-full pl-2 font-medium theme-accent': $route.name === 'Gallery' }"
               >
                 Photos
-              </router-link>
-            </li>
-            <li>
-              <router-link 
-                to="/videos" 
-                @click="closeMobileMenu"
-                class="block hover:theme-accent transition-colors py-2"
-                :class="{ 'border-l-4 theme-border-full pl-2 font-medium theme-accent': $route.name === 'Videos' }"
-              >
-                Vidéos
-              </router-link>
-            </li>
-            <li>
-              <router-link 
-                to="/temoignages" 
-                @click="closeMobileMenu"
-                class="block hover:theme-accent transition-colors py-2"
-                :class="{ 'border-l-4 theme-border-full pl-2 font-medium theme-accent': $route.name === 'Testimonials' }"
-              >
-                Témoignages
-              </router-link>
-            </li>
-            <li>
-              <router-link 
-                to="/elements-spirituels" 
-                @click="closeMobileMenu"
-                class="block hover:theme-accent transition-colors py-2"
-                :class="{ 'border-l-4 theme-border-full pl-2 font-medium theme-accent': $route.name === 'Spiritual' }"
-              >
-                Éléments Spirituels
               </router-link>
             </li>
             <li>
@@ -309,8 +258,8 @@
 
 <script setup>
 import { ref, onMounted } from 'vue'
-import ThemeSelector from './components/ThemeSelector.vue'
 import Footer from './components/Footer.vue'
+import { loadTheme } from './composables/useTheme.js'
 
 // État de chargement
 const isLoading = ref(true)
@@ -318,8 +267,11 @@ const isLoading = ref(true)
 // État du menu mobile
 const isMobileMenuOpen = ref(false)
 
-// Masquer l'écran de chargement après le chargement initial
+// Masquer l'écran de chargement après le chargement initial et charger le thème par défaut
 onMounted(() => {
+  // Charger le thème par défaut
+  loadTheme()
+  
   setTimeout(() => {
     isLoading.value = false
   }, 1500) // Afficher pendant 1.5 secondes

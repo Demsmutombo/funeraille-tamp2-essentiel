@@ -48,11 +48,11 @@
       </div>
     </div>
 
-    <!-- Inspiring Words Section -->
-    <div class="text-center py-8 border-t theme-border mt-8">
+    <!-- Inspiring Words Section (masqué dans l'offre Essentiel) -->
+    <div v-if="data.spiritual.favoriteQuotes && data.spiritual.favoriteQuotes.length > 0" class="text-center py-8 border-t theme-border mt-8">
       <h2 class="text-2xl font-semibold theme-accent mb-6">Paroles Inspirantes</h2>
       <blockquote class="text-3xl italic theme-text mb-3 font-light">
-        "{{ data.spiritual.favoriteQuotes[0] || 'The light remains with us.' }}"
+        "{{ data.spiritual.favoriteQuotes[0] }}"
       </blockquote>
       <p class="theme-text-secondary">- {{ data.personalInfo.fullName }}</p>
     </div>
